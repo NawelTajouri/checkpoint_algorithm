@@ -1,0 +1,25 @@
+ALGORITHM sentence_algo
+VAR
+i:INTEGER;
+voyelcompt:=0;
+wordcompt:=0;
+str:="we are go my code.";
+strLength:=0;
+BEGIN
+strLength:=str.length;
+WHILE (i< str.length) DO
+    if(str[i]=" " and str[i] <> ".")
+    wordcompt:= wordcompt+1;
+    END_if
+END_WHILE
+FOR i FROM 0 TO str.length-1 STEP 1 DO
+    if ( str[i]:="a","A","e","E","i","I", "o","O","y","Y", "U", "u")
+    voyelcompt:=voyelcompt+1;
+    else
+    (str[i]:="consone");
+    END_if
+END_FOR
+write(strLength);
+write(wordcompt)
+write(voyelcompt);
+END
